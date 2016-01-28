@@ -16,6 +16,6 @@ class HelloController extends Controller
 	 */
 	
 	public function indexAction($name) {
-		return $this->render('hello/index.html.twig');
+		return $this->render('hello/index.html.twig', array('name' => $name));
 	}
 }
