@@ -9,13 +9,13 @@ use Symfony\Component\HttpFoundation\Response;
 
 class HelloController extends Controller
 {
-	/**
-	 *
-	 * @Route("/hello/{name}", name="hello")
-	 *
-	 */
-	
-	public function indexAction($name) {
-		return $this->render('hello/index.html.twig', array('name' => $name));
-	}
+    /**
+     *
+     * @Route("/hello/{name}", name="hello")
+     *
+     */
+    
+    public function indexAction($name) {
+        return $this->render('hello/index.html.twig', array('name' => $name));
+    }
 }
