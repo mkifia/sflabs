@@ -28,6 +28,6 @@ class BlogController extends Controller
         $uri = $this->get('router')->generate('blog_show', array('slug' => 'my-slug'));
         var_dump($param);
         var_dump($uri);
-        return new Response("<html><body><h1>Show</h1>$slug</body></html>");
+        return $this->render('blog/index.html.twig', array('param' => $param));
     }
 }
