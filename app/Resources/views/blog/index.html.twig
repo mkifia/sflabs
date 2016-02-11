@@ -3,9 +3,14 @@
 
 {% block title %}My cool blog posts{% endblock %}
 
+{% block sidebar %}
+	{{ parent() }}
+{% endblock %}
+
 {% block body %}
-    {# {% for entry in blog_entries %}
-        <h2>{{ entry.title }}</h2>
-        <p>{{ entry.body }}</p>
-    {% endfor %} #}
+    {% for i in 0..10 %}
+    	<div class="{{ cycle(['odd', 'even'], i) }}">
+    		<p>{{i}}</p>
+    	</div>
+    {% endfor %}
 {% endblock %}
